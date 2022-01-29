@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Arms
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature.001
+    m_Weight: 1
+  - m_Path: Armature.001/Bone
+    m_Weight: 0
+  - m_Path: Armature.001/Bone/Head
+    m_Weight: 1
+  - m_Path: Armature.001/Bone/Head/Head_end
+    m_Weight: 1
+  - m_Path: Armature.001/Bone/LHand
+    m_Weight: 1
+  - m_Path: Armature.001/Bone/LHand/LHand_end
+    m_Weight: 1
+  - m_Path: Armature.001/Bone/LLeg
+    m_Weight: 0
+  - m_Path: Armature.001/Bone/LLeg/LLeg_end
+    m_Weight: 1
+  - m_Path: Armature.001/Bone/RHand
+    m_Weight: 1
+  - m_Path: Armature.001/Bone/RHand/RHand_end
+    m_Weight: 1
+  - m_Path: Armature.001/Bone/RLeg
+    m_Weight: 0
+  - m_Path: Armature.001/Bone/RLeg/RLeg_end
+    m_Weight: 1
+  - m_Path: Cube.003
+    m_Weight: 1
