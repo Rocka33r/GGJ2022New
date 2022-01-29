@@ -7,6 +7,29 @@ public class GameMaster : MonoBehaviour
     public CanvasGroup fade;
 	public Animation[] elevators;
 	public Animation[] cars;
+	public CanvasGroup logo;
+	public ParticleSystem rain;
+	public Animation cutscene;
+	
+	private bool cutsceneRunning;
+	
+	private IEnumerator cutsceneRountine()
+	{
+		cutsceneRunning = true;
+		LeanTween.alphaCanvas(logo, 0, 2);
+		yield return new WaitForSeconds(4);
+		rain.Play();
+		yield return new WaitForSeconds(1);
+		cutscene.Play();
+	}
+	
+	private void Update()
+	{
+		if (Input.GetMouseButtonDown(0) && cutsceneRunning == false)
+		{
+			StartCoroutine(cutsceneRountine());
+		}
+	}
 	
 	private void Start()
 	{
