@@ -8,6 +8,6 @@ public class Bob : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, myCurve.Evaluate((Time.time % myCurve.length)), transform.position.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, myCurve.Evaluate((Time.time % myCurve.length)), transform.localPosition.z);
     }
 }
