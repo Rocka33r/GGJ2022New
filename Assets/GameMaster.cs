@@ -13,6 +13,11 @@ public class GameMaster : MonoBehaviour
 	
 	private bool cutsceneRunning;
 	
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
 	private IEnumerator cutsceneRountine()
 	{
 		cutsceneRunning = true;

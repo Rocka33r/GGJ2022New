@@ -10,8 +10,10 @@ public class CutsceneFades : MonoBehaviour
     public AudioSource city;
     public AudioSource ding;
     public AudioSource rainInterior;
+    public CanvasGroup text1;
+    public CanvasGroup text2;
 
-	public void fadeIn()
+    public void fadeIn()
 	{
 		LeanTween.alphaCanvas(fade, 1, 1.5f);
 	}
@@ -59,5 +61,19 @@ public class CutsceneFades : MonoBehaviour
     public void stopRain()
     {
         rain.Stop();
+    }
+
+    private IEnumerator textRoutine()
+    {
+        LeanTween.alphaCanvas(text1, 1, 2);
+        yield return new WaitForSeconds(3);
+        LeanTween.alphaCanvas(text2, 1, 1);
+        yield return new WaitForSeconds(7);
+        Application.Quit();
+    }
+
+    public void fadeText()
+    {
+        StartCoroutine(textRoutine());
     }
 }
